@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JANSETU - Registration</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #173354;
+    padding: 20px;
+}
+
+.container {
+    max-width: 520px;
+    margin: 25px auto;
+    background: white;
+    padding: 30px 24px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.09);
+}
+
+.logo {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #102b50;
+}
+
+.logo span {
+    color: #f5a623;
+}
+
+.tagline {
+    text-align: center;
+    margin: 8px 0 25px;
+    color: #65748b;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd5e0;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.roles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
+    margin: 15px 0 22px;
+}
+
+.role {
+    border: 2px solid #dce3ed;
+    border-radius: 9px;
+    padding: 15px 5px;
+    text-align: center;
+    cursor: pointer;
+    background: white;
+    font-size: 14px;
+}
+
+.role input {
+    width: auto;
+    margin-bottom: 8px;
+}
+
+.role.selected {
+    border-color: #f5a623;
+    background: #fff5e4;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #102b50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #214d7b;
+}
+
+.note {
+    font-size: 13px;
+    color: #718096;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    color: #102b50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">JAN<span>SETU</span></div>
+
+<p class="tagline">हर संपत्ति का सही साथी।</p>
+
+<h2>अपना अकाउंट बनाएं</h2>
+
+<form id="registerForm">
+
+<label>आप JANSETU पर कौन हैं?</label>
+
+<div class="roles">
+
+<label class="role selected">
+<input type="radio" name="role" value="Buyer" checked>
+<br>🏡
+<br>खरीदार
+</label>
+
+<label class="role">
+<input type="radio" name="role" value="Seller">
+<br>🏠
+<br>विक्रेता
+</label>
+
+<label class="role">
+<input type="radio" name="role" value="Dealer">
+<br>🤝
+<br>डीलर
+</label>
+
+</div>
+
+<label for="name">पूरा नाम *</label>
+<input type="text" id="name" placeholder="अपना नाम लिखें" required>
+
+<label for="mobile">मोबाइल नंबर *</label>
+<input type="tel" id="mobile" placeholder="10 अंकों का मोबाइल नंबर"
+pattern="[6-9][0-9]{9}" maxlength="10" required>
+
+<label for="email">ईमेल (वैकल्पिक)</label>
+<input type="email" id="email" placeholder="अपना ईमेल लिखें">
+
+<label for="city">शहर / जिला *</label>
+<input type="text" id="city" placeholder="जैसे फर्रुखाबाद" required>
+
+<label for="state">राज्य *</label>
+<select id="state" required>
+<option value="">राज्य चुनें</option>
+<option>उत्तर प्रदेश</option>
+<option>बिहार</option>
+<option>दिल्ली</option>
+<option>मध्य प्रदेश</option>
+<option>राजस्थान</option>
+<option>हरियाणा</option>
+<option>उत्तराखंड</option>
+<option>अन्य</option>
+</select>
+
+<button type="submit">रजिस्ट्रेशन करें</button>
+
+<p class="note">
+रजिस्ट्रेशन की वास्तविक
