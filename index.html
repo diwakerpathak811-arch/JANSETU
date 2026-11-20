@@ -3,86 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JANSETU - अपना प्रॉपर्टी साथी</title>
+<title>JANSETU - A Property Connect Platform</title>
+<meta name="description" content="JANSETU - हर संपत्ति का सही साथी। खरीदारों, विक्रेताओं और प्रॉपर्टी डीलरों को जोड़ने वाला प्लेटफॉर्म।">
 
 <style>
-* {
-    box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Arial,sans-serif;
+color:#172b4d;
+background:#f5f8fc;
+line-height:1.6;
 }
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #222;
+
+header{
+background:white;
+padding:15px 5%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+box-shadow:0 2px 12px #00000010;
 }
-header {
-    background: #123b65;
-    color: white;
-    padding: 22px 15px;
-    text-align: center;
+
+.logo{
+font-size:29px;
+font-weight:900;
+color:#123c72;
 }
-header h1 {
-    margin: 0;
-    font-size: 32px;
-    letter-spacing: 2px;
+
+.logo span{color:#f28c28}
+
+.tag{
+font-size:10px;
+letter-spacing:2px;
+font-weight:bold;
+color:#f28c28;
+display:block;
 }
-header p {
-    margin-bottom: 0;
+
+nav a{
+text-decoration:none;
+color:#17385f;
+margin:8px;
+font-size:14px;
+font-weight:bold;
 }
-.hero {
-    text-align: center;
-    padding: 45px 15px;
-    background: #e4f0ff;
+
+.hero{
+background:linear-gradient(125deg,#10366a,#1763a0);
+color:white;
+text-align:center;
+padding:75px 18px;
 }
-.hero h2 {
-    font-size: 27px;
-    color: #123b65;
+
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
 }
-.search {
-    max-width: 450px;
-    margin: 20px auto;
+
+.hero h1 span{color:#ffae48}
+
+.hero p{
+font-size:18px;
+margin:12px auto;
+max-width:650px;
 }
-input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #aaa;
-    border-radius: 8px;
-    font-size: 16px;
+
+.search{
+background:white;
+padding:15px;
+border-radius:12px;
+max-width:650px;
+margin:25px auto;
+display:flex;
+gap:10px;
 }
-button {
-    background: #e69b24;
-    color: white;
-    border: none;
-    padding: 13px 25px;
-    border-radius: 7px;
-    font-size: 16px;
-    margin: 10px 5px;
+
+.search input{
+flex:1;
+min-width:0;
+border:1px solid #ddd;
+padding:13px;
+border-radius:7px;
+font-size:15px;
 }
-section {
-    padding: 25px 15px;
-    text-align: center;
+
+button,.btn{
+background:#f28c28;
+color:white;
+border:none;
+padding:13px 22px;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
 }
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+
+.actions{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
 }
-.card {
-    background: white;
-    padding: 25px 15px;
-    border-radius: 12px;
-    width: 145px;
-    box-shadow: 0 2px 8px #ddd;
+
+.actions .secondary{background:white;color:#174477}
+
+section{
+padding:50px 6%;
+text-align:center;
 }
-.card h3 {
-    color: #123b65;
+
+section h2{
+font-size:27px;
+color:#153e70;
+margin-bottom:12px;
 }
-footer {
-    background: #123b65;
-    color: white;
-    text-align: center;
-    padding: 22px;
+
+.sub{
+color:#64748b;
+margin-bottom:28px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1050px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:28px 18px;
+border-radius:13px;
+box-shadow:0 4px 18px #0000000c;
+}
+
+.icon{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.card h3{color:#164578;margin-bottom:8px}
+
+.card p{color:#64748b;font-size:14px}
+
+.invest{
+background:#fff3e5;
+padding:45px 15px;
+text-align:center;
+}
+
+.invest h2{color:#bd6818}
+
+.invest p{
+font-size:18px;
+max-width:750px;
+margin:10px auto;
+}
+
+.notice{
+background:#fff;
+border:2px solid #e6a23c;
+border-radius:12px;
+padding:25px;
+max-width:900px;
+margin:auto;
+text-align:left;
+}
+
+.notice h3{color:#b45309;margin-bottom:10px}
+
+.notice p{font-size:14px;color:#475569;margin-bottom:8px}
+
+footer{
+background:#102d50;
+color:white;
+padding:35px 6%;
+text-align:center;
+}
+
+footer .logo{color:white}
+
+footer p{font-size:13px;margin-top:10px;color:#d5e2f1}
+
+footer a{color:#ffb45b;text-decoration:none}
+
+@media(max-width:600px){
+header{justify-content:center;gap:12px}
+nav{text-align:center}
+nav a{margin:5px;font-size:12px}
+.hero h1{font-size:29px}
+.search{flex-direction:column}
+section{padding:38px 5%}
 }
 </style>
 </head>
@@ -90,54 +206,134 @@ footer {
 <body>
 
 <header>
-<h1>JANSETU</h1>
-<p>आपका अपना प्रॉपर्टी साथी</p>
+<div>
+<div class="logo">JAN<span>SETU</span></div>
+<span class="tag">A PROPERTY CONNECT PLATFORM</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#buy">Buy</a>
+<a href="#sell">Sell</a>
+<a href="#dealer">Dealer</a>
+</nav>
 </header>
 
-<div class="hero">
-<h2>सपनों की प्रॉपर्टी, अब होगी आसान!</h2>
-<p>खरीदार, विक्रेता और डीलर — सब एक मंच पर।</p>
+<div class="hero" id="home">
+<h1>JAN<span>SETU</span></h1>
+<h3>A PROPERTY CONNECT PLATFORM</h3>
+
+<p>हर संपत्ति का सही साथी।</p>
+<p>खरीदारों, विक्रेताओं और प्रॉपर्टी डीलरों को जोड़ने का एक नया डिजिटल मंच।</p>
 
 <div class="search">
-<input type="text" placeholder="शहर या प्रॉपर्टी खोजें">
-<button>प्रॉपर्टी खोजें</button>
+<input type="text" id="propertySearch"
+placeholder="शहर, क्षेत्र या प्रॉपर्टी खोजें...">
+<button onclick="searchProperty()">Search</button>
+</div>
+
+<div class="actions">
+<a href="#buy" class="btn">Buy Property</a>
+<a href="#sell" class="btn secondary">Sell Property</a>
 </div>
 </div>
 
-<section>
-<h2>JANSETU पर आपका स्वागत है</h2>
+<section id="buy">
+<h2>अपनी पसंद की प्रॉपर्टी खोजें</h2>
+<p class="sub">आपकी जरूरत, आपकी पसंद और आपका सही निर्णय।</p>
+
 <div class="cards">
 <div class="card">
-<h3>🏠 खरीदें</h3>
-<p>अपनी पसंद की प्रॉपर्टी खोजें।</p>
+<div class="icon">🏠</div>
+<h3>Residential</h3>
+<p>मकान, फ्लैट और आवासीय प्लॉट।</p>
 </div>
 
 <div class="card">
-<h3>🤝 बेचें</h3>
-<p>अपनी प्रॉपर्टी की जानकारी दें।</p>
+<div class="icon">🏢</div>
+<h3>Commercial</h3>
+<p>दुकान, ऑफिस और व्यावसायिक संपत्ति।</p>
 </div>
 
 <div class="card">
-<h3>🔑 किराये पर</h3>
-<p>किराये के मकान और दुकान खोजें।</p>
-</div>
-
-<div class="card">
-<h3>👨‍💼 डीलर</h3>
-<p>अपनी डिजिटल दुकान बनाएँ।</p>
+<div class="icon">🌳</div>
+<h3>Agricultural Land</h3>
+<p>कृषि भूमि और अन्य जमीन।</p>
 </div>
 </div>
 </section>
 
-<section>
-<h2>हमारी शुरुआत</h2>
-<p>फर्रुखाबाद और फतेहगढ़, उत्तर प्रदेश</p>
+<section id="sell" style="background:#eaf2fa">
+<h2>अपनी प्रॉपर्टी बेचें</h2>
+<p class="sub">अपनी संपत्ति की जानकारी देकर संभावित खरीदारों तक पहुंचें।</p>
+<a href="#contact" class="btn">Sell Your Property</a>
+</section>
+
+<section id="dealer">
+<h2>Dealer Registration</h2>
+<p class="sub">अपनी डिजिटल प्रॉपर्टी दुकान बनाएं और ग्राहकों तक पहुंचें।</p>
+
+<div class="cards">
+<div class="card">
+<div class="icon">🤝</div>
+<h3>Dealer Profile</h3>
+<p>अपना नाम, फोटो और संपर्क जानकारी प्रदर्शित करें।</p>
+</div>
+
+<div class="card">
+<div class="icon">🏪</div>
+<h3>Digital Store</h3>
+<p>अपनी प्रॉपर्टी लिस्टिंग एक जगह दिखाएं।</p>
+</div>
+
+<div class="card">
+<div class="icon">⭐</div>
+<h3>Build Trust</h3>
+<p>ग्राहकों के साथ पारदर्शी संबंध बनाएं।</p>
+</div>
+</div>
+</section>
+
+<div class="invest">
+<h2>प्रॉपर्टी एक बेहतर इन्वेस्टमेंट है।</h2>
+<p>आज का सही निर्णय, कल का बेहतर भविष्य।</p>
+<p>सही जानकारी और स्वतंत्र जांच के साथ अपने निवेश का निर्णय लें।</p>
+</div>
+
+<section id="contact">
+<h2>JANSETU से जुड़ें</h2>
+<p class="sub">खरीदार, विक्रेता और डीलर — सभी का स्वागत है।</p>
+<p>संपर्क जानकारी और रजिस्ट्रेशन की सुविधा जल्द उपलब्ध होगी।</p>
+</section>
+
+<section style="padding-top:10px">
+<div class="notice">
+<h3>⚠️ महत्वपूर्ण सूचना एवं चेतावनी</h3>
+<p>प्रॉपर्टी खरीदने या उसमें निवेश करने से पहले उसकी समस्त कानूनी, राजस्व एवं भौतिक जांच-पड़ताल स्वयं अवश्य करें।</p>
+<p>भूमि के स्वामित्व, खसरा-खतौनी, नक्शे, विवाद एवं अन्य संबंधित दस्तावेजों की स्वतंत्र रूप से पुष्टि करें।</p>
+<p>JANSETU पर उपलब्ध जानकारी केवल सूचनात्मक है। किसी भी संपत्ति की वैधानिक स्थिति या निवेश पर लाभ की गारंटी JANSETU द्वारा नहीं दी जाती।</p>
+</div>
 </section>
 
 <footer>
-<p>JANSETU © 2026</p>
-<p>आपका भरोसा, हमारा प्रयास।</p>
+<div class="logo">JAN<span>SETU</span></div>
+<p>A PROPERTY CONNECT PLATFORM</p>
+<p>हर संपत्ति का सही साथी।</p>
+<p>विश्वास | पारदर्शिता | जिम्मेदारी</p>
+<p>© 2026 JANSETU. All Rights Reserved.</p>
+<p><a href="#home">Back to Top ↑</a></p>
 </footer>
+
+<script>
+function searchProperty(){
+const value=document.getElementById("propertySearch").value.trim();
+if(!value){
+alert("कृपया शहर या प्रॉपर्टी का नाम लिखें।");
+return;
+}
+alert("JANSETU पर '"+value+"' की खोज सुविधा जल्द उपलब्ध होगी।");
+}
+</script>
 
 </body>
 </html>
