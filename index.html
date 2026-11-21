@@ -2,6 +2,7 @@
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>JANSETU - हर संपत्ति का सही साथी</title>
@@ -261,6 +262,16 @@ footer p {
     }
 }
 </style>
+ <script>
+const SUPABASE_URL = 'https://mvxqjhaiqgvbllljkgso.supabase.co';
+
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_C-y_qCVWXu6L9HUQungENA_m05pkE8z';
+
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_PUBLISHABLE_KEY
+);
+ </script>   
 </head>
 
 <body>
