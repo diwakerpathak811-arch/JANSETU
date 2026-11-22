@@ -310,7 +310,11 @@ stroke-linecap="round"/>
 <a href="#dealers">डीलर्स</a>
 <a href="#about">हमारे बारे में</a>
 </nav>
-
+<button type="button" id="googleLoginBtn"
+class="btn btn-orange"
+style="border:0; cursor:pointer;">
+Google से लॉगिन
+</button>
 </header>
 
 
@@ -505,6 +509,21 @@ JAN<span>SETU</span>
 <p>© 2026 JANSETU. All Rights Reserved.</p>
 
 </footer>
+<script>
+document.getElementById("googleLoginBtn").addEventListener("click", async function() {
 
+    const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+            redirectTo: "https://diwakerpathak811-arch.github.io/JANSETU/"
+        }
+    });
+
+    if (error) {
+        alert("Google Login Error: " + error.message);
+    }
+
+});
+</script>
 </body>
 </html>
